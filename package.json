@@ -17,5 +17,21 @@
   "devDependencies": {
     "@babel/core": "^7.12.9"
   },
-  "private": true
+  "private": true,
+  "description": "\"Treino app\"",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vitor-ext/Dev-React.git"
+  },
+  "keywords": [
+    "react-native",
+    "app",
+    "mobile"
+  ],
+  "author": "❤🚀❤ Vitor de Jesus ❤🚀❤",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vitor-ext/Dev-React/issues"
+  },
+  "homepage": "https://github.com/Vitor-ext/Dev-React#readme"
 }
