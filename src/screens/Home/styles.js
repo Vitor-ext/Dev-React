@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         margin: 5,
       },
       InputArea:{
-        padding: 15,
+        padding: 15
       }
   });
 
