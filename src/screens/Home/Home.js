@@ -5,7 +5,8 @@ import {
   Text,
   View,
   Image,
-  Alert
+  Alert,
+  Animated, 
 } from 'react-native';
 import styles from "./styles";
 import React, { useState } from 'react';
@@ -95,7 +96,21 @@ export default function App() {
         <Text>APOSTAR</Text>
       </TouchableOpacity>
 
+
+
+
+
+
     </View>
   );
 }
 
+/**      <Animated.Image
+          style={{
+          width: 100,
+          height: 100,
+          transform: [{translateX: startValue,}],
+        }}
+       source={require('./assets/icon.png')}
+      />
+ */
