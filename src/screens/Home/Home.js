@@ -51,6 +51,10 @@ export default function App() {
       });
   }
 
+  const mov = (i) => {
+    for (var i = 1; i <= 200; i++);
+  }
+
 
   return (
     <View style={styles.container}>
@@ -62,6 +66,15 @@ export default function App() {
       <View >
         <Image source = {Aviao} style = {styles.Image}/>
         <StatusBar style="auto" />
+        <Animated.Image
+          style={{
+          width: 80,
+          height: 40,
+          transform: [{translateX: 0,}],
+          // transform: [{translateY: 1000,}],
+        }}
+       source={require('../../assets/Aviao.png')}
+      />
       </View>
 
       <View style={styles.InputArea} >
@@ -105,12 +118,4 @@ export default function App() {
   );
 }
 
-/**      <Animated.Image
-          style={{
-          width: 100,
-          height: 100,
-          transform: [{translateX: startValue,}],
-        }}
-       source={require('./assets/icon.png')}
-      />
- */
+    
