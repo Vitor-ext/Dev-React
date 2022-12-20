@@ -5,10 +5,10 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "splash": {
-      "image": "./src/assets/play2.jpg",
-      "resizeMode": "contain",
+      "image": "./assets/dado.png",
+      "resizeMode": "auto",
       "backgroundColor": "#000000"
     },
     "updates": {

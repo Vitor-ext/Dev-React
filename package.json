@@ -14,9 +14,13 @@
     "axios": "^1.2.1",
     "expo": "~47.0.8",
     "expo-status-bar": "~1.4.2",
-    "react": "^18.1.0",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-is": "16.8",
     "react-native": "^0.70.5",
-    "react-navigation": "^4.4.4"
+    "react-navigation": "^4.4.4",
+    "styled": "^1.0.0",
+    "styled-components": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

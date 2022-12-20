@@ -10,9 +10,9 @@ const Stack = createStackNavigator();
 
 export default() => (
     <Stack.Navigator 
-        initialRouteName="Home"  // Define a tela Inicial do APP
-        screenOptions={{
-            headershown: false // oculta o cabeçario
+            initialRouteName="Home"  // Define a tela Inicial do APP
+            screenOptions={{
+            headerShown: false // oculta o cabeçario
         }}
     >
 
