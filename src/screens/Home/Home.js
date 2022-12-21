@@ -5,15 +5,17 @@ import {
   Text,
   View,
   Image,
+  Easing,
   Alert,
-  Animated, 
+  Animated,
 } from 'react-native';
 import styles from "./styles";
 import React, { useState } from 'react';
+import useRef from 'react';
 import { useNavigation } from '@react-navigation/native';
 import Api from '../../api';
 import SignInput from '../../components/SignInput';
-import Aviao from '../../../src/assets/Aviao.png';
+import Aviao from '../../../src/assets/Aviao.png'; 
 
 
 export default function App() {
@@ -22,6 +24,20 @@ export default function App() {
 
   const [valor1Field, setvalor1Field] = useState('1,00');
   const [valor2Field, setvalor2Field] = useState('1,00');
+
+  const [startValueY] = useState(() => new Animated.Value(0));
+
+  const moveImageY = () => {
+    startValueY.setValue(130);
+
+    Animated.timing(startValueY, {
+      toValue: 5,
+      duration: 5000,
+      easing: Easing.bounce,
+      useNativeDriver: true,
+    }).start();
+    return moveImageY;
+  };
 
   const Aposta1 = (req) => {
     Api.post("Definir URL do BACK", {
@@ -35,7 +51,7 @@ export default function App() {
         Alert.alert('Erro', 'Impossivel apostar nesta rodada')
         console.log(e);
       });
-  }
+  };
 
   const Aposta2 = (req) => {
     Api.post("Definir URL do BACK", {
@@ -49,11 +65,7 @@ export default function App() {
         Alert.alert('Erro', 'Impossivel apostar nesta rodada')
         console.log(e);
       });
-  }
-
-  const mov = (i) => {
-    for (var i = 1; i <= 200; i++);
-  }
+  };
 
 
   return (
@@ -63,22 +75,18 @@ export default function App() {
         <StatusBar style="auto" />
       </View>
 
-      <View >
-        <Image source = {Aviao} style = {styles.Image}/>
-        <StatusBar style="auto" />
+      <View style={styles.Image} >
         <Animated.Image
           style={{
-          width: 80,
-          height: 40,
-          transform: [{translateX: 0,}],
-          // transform: [{translateY: 1000,}],
-        }}
-       source={require('../../assets/Aviao.png')}
-      />
+            width: 80,
+            height: 40,
+            transform: [{translateY: startValueY,}],
+          }}
+          source={require('../../assets/Aviao.png')}
+        />
       </View>
 
       <View style={styles.InputArea} >
-
         <SignInput
           placeholder="0,00"
           value={valor1Field}
@@ -109,13 +117,13 @@ export default function App() {
         <Text>APOSTAR</Text>
       </TouchableOpacity>
 
-
-
-
-
+      <TouchableOpacity
+        style={styles.btaposta}
+        onPress={moveImageY}
+      >
+        <Text>Inicio</Text>
+      </TouchableOpacity>
 
     </View>
   );
-}
-
-    
+};

@@ -12,7 +12,7 @@ const Stack = createStackNavigator();
 
 export default() => (
     <Stack.Navigator 
-            initialRouteName="SignIn"  // Define a tela Inicial do APP
+            initialRouteName="Home"  // Define a tela Inicial do APP
             screenOptions={{
             headerShown: false // oculta o cabeçario
         }}
