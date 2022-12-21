@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
         height: 200,
         padding: 20,
         margin:10,
+        backgroundColor: 'black',
       },
       btaposta:{
         alignItems: "center",
